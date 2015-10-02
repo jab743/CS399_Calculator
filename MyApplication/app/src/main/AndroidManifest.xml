@@ -8,7 +8,7 @@
         android:label="Calculator"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".HelloWorld"
+            android:name=".MainActivity"
             android:label="Calculator" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
