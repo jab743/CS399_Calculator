@@ -97,8 +97,17 @@ public class Calculator extends Activity {
             num = numtemp+num;
         else if(op == '-')
             num = numtemp-num;
-        else if(op == '/')
-            num = numtemp/num;
+        else if(op == '/') {
+            if (num == 0) {
+                showResult.setText("undefined");
+                str = "";
+                op = 'q';
+                num = 0;
+                numtemp = 0;
+                return;
+            }
+            num = numtemp / num;
+        }
         else if(op == '*')
             num = numtemp*num;
         showResult.setText(""+num);
