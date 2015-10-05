@@ -83,7 +83,12 @@ public class Calculator extends Activity {
         showResult.setText("");
     }
     private void insert(String j) {
-        str = str+j;
+        if(j.equals(".")) {
+            if(!str.contains(j))
+                str = str+j;
+        }
+        else
+            str = str+j;
         if(!j.equals("."))
             num = Float.parseFloat(str);
         showResult.setText(str);
